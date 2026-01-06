@@ -31,6 +31,9 @@ Operating hours = 100 / 25 = 4.0 hours
 """
 
 
+from ast import Pow
+
+
 def calculate_operating_hours(battery_capacity_wh, power_draw_w):
     """
     Calculate how many hours a robot can operate.
@@ -46,9 +49,9 @@ def calculate_operating_hours(battery_capacity_wh, power_draw_w):
         calculate_operating_hours(100, 25) should return 4.0
     """
     # TODO: Implement the formula here
-    pass
-
-
+    operating_hours = float(battery_capacity_wh / power_draw_w)
+    return  operating_hours
+    
 def create_robot_name(base_name, model_number):
     """
     Combine base name and model number into a full robot name.
@@ -64,7 +67,8 @@ def create_robot_name(base_name, model_number):
         create_robot_name("Scout", "3000") should return "Scout-3000"
     """
     # TODO: Combine base_name and model_number into a full name
-    pass
+    full_name =(f"{base_name}-{model_number}")
+    return full_name
 
 
 def get_robot_summary(base_name, model_number, battery_capacity_wh, power_draw_w):
@@ -91,8 +95,10 @@ def get_robot_summary(base_name, model_number, battery_capacity_wh, power_draw_w
         name: Scout-3000, battery: 100, power: 25, hours: 4
     """
     # TODO: Use create_robot_name() to get the full robot name
-    
     # TODO: Use calculate_operating_hours() to get operating time
-    
+    robot_name = create_robot_name(base_name, model_number)
+    operating_hours = calculate_operating_hours(battery_capacity_wh, power_draw_w)
+
+    return (f"name: {robot_name}, battery: {battery_capacity_wh}, power: {power_draw_w}, hours: {operating_hours}")
     # TODO: Return a formatted summary string using f-strings
-    pass
+    
