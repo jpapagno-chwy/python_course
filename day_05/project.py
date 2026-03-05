@@ -74,6 +74,13 @@ def create_robot_config(name, motor_count, sensor_count, battery_wh):
          "sensors": {}, "battery_wh": 100, "sensor_count": 3}
     """
     # TODO: Create and return the robot config dictionary
+    return  {
+            "name": name,
+            "motors": {"count": motor_count, "power_per_motor": 25},
+            "sensors": {},  # empty dict, sensors added later
+            "battery_wh": battery_wh,
+            "sensor_count": sensor_count
+        }
     pass
 
 
@@ -96,6 +103,7 @@ def get_total_power_draw(robot):
     Hint: Access nested dict with robot["motors"]["count"]
     """
     # TODO: Calculate and return motor_count * power_per_motor
+    return robot["motors"]["count"] * robot["motors"]["power_per_motor"]
     pass
 
 
@@ -119,6 +127,8 @@ def add_sensor(robot, sensor_name, sensor_range):
     Hint: robot["sensors"][sensor_name] = sensor_range
     """
     # TODO: Add the sensor to robot["sensors"] and return robot
+    robot["sensors"][sensor_name] = sensor_range
+    return robot
     pass
 
 
@@ -141,6 +151,10 @@ def find_robot_by_name(fleet, name):
     Hint: Loop through fleet and check each robot["name"]
     """
     # TODO: Loop through fleet and return matching robot
+    for robot in fleet:
+        if robot["name"] == name:
+            return robot
+    return None
     pass
 
 
@@ -170,6 +184,17 @@ def get_fleet_summary(fleet):
     Hint: Use a loop to sum up the values
     """
     # TODO: Calculate and return the fleet summary dictionary
+    out = {
+        "total_robots": 0,
+        "total_battery_wh": 0,
+        "total_motors": 0
+    }
+    for robot in fleet:
+        out["total_robots"] += 1
+        out["total_battery_wh"] += robot["battery_wh"]
+        out["total_motors"] += robot["motors"]["count"]
+    return out
+    
     pass
 
 
@@ -195,5 +220,11 @@ def get_most_capable_robot(fleet):
     Hint: Track the best robot as you loop through
     """
     # TODO: Find and return the name of the robot with most sensors
+    max_sensor_count = 0
+    max_sensor_robot = None
+    for robot in fleet:
+        if robot["sensor_count"] > max_sensor_count:
+            max_sensor_count = robot["sensor_count"]
+            max_sensor_robot = robot
+    return max_sensor_robot["name"] if max_sensor_robot else None
     pass
-

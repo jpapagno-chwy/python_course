@@ -146,9 +146,10 @@ class Robot:
         
         Hint: For simplicity, only handle 0, 90, 180, 270 degree headings
         """
-        # TODO: Check if robot is_operational first
+        if not self.is_operational:
+            return
         # TODO: Update position based on heading
-        # TODO: Consume battery equal to distance
+        self.consume_battery(distance)
         pass
     
     def rotate(self, degrees):
@@ -217,3 +218,34 @@ class Robot:
         # TODO: Return True if battery > 0, False otherwise
         pass
 
+
+
+
+class RobotGroup:
+    def __init__(self, robots : list[Robot]):
+        self.robots = robots
+
+    def move_all(self, distance: int):
+        for robot in self.robots:
+            robot.move(distance)
+
+    def rotate_all(self, degrees: int):
+        for robot in self.robots:
+            robot.rotate(degrees)
+
+    def report_all(self):
+        for robot in self.robots:
+            robot.report_status()
+
+
+class GameBoard:
+    def __init__(self, width: int, height: int):
+        self.width = width
+        self.height = height
+        self.robots = []
+
+    def add_robot(self, robot: Robot):
+        self.robots.append(robot)
+
+    def remove_robot(self, robot: Robot):
+        self.robots.remove(robot)

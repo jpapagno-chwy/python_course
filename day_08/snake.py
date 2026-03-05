@@ -4,6 +4,12 @@ import keyboard
 import sys
 import os
 
+def render(board_str):
+    sys.stdout.write("\033[H\033[J")  # cursor home + clear screen
+    sys.stdout.write(board_str)
+    sys.stdout.flush()
+
+
 class Game:
     def __init__(self, width, height) -> None:
         self.width = width
@@ -46,8 +52,7 @@ class Game:
     def run_game(self):
         while not self.game_over:
             board_string = self.create_board_string()
-            os.system("clear")   # macOS/Linux
-            print(board_string)
+            render(board_string)
 
     def restart(self):
         self.game_over = True
