@@ -1,0 +1,88 @@
+{
+  "messages": [
+    {
+      "header": {"seq": 1, "stamp": {"secs": 1706000000, "nsecs": 0}},
+      "lidar_scan": [1.5, 3.0, 6.0, 9.0, 11.0],
+      "linear_velocity": 0.5,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_001"
+    },
+    {
+      "header": {"seq": 2, "stamp": {"secs": 1706000000, "nsecs": 500000000}},
+      "lidar_scan": [2.0, 4.5, 8.0, 10.0, 14.0],
+      "linear_velocity": 0.3,
+      "angular_velocity": 0.4,
+      "camera_frame_id": "front_cam_002"
+    },
+    {
+      "header": {"seq": 3, "stamp": {"secs": 1706000001, "nsecs": 0}},
+      "lidar_scan": [5.0, 7.0, 3.5, 2.0, 8.5],
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.6,
+      "camera_frame_id": "front_cam_003"
+    },
+    {
+      "header": {"seq": 4, "stamp": {"secs": 1706000001, "nsecs": 500000000}},
+      "lidar_scan": [4.0, 6.0, 9.5, 11.5, 12.0],
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_004"
+    },
+    {
+      "header": {"seq": 5, "stamp": {"secs": 1706000002, "nsecs": 0}},
+      "lidar_scan": [1.0, 2.5, 5.0, 8.0, 13.0],
+      "linear_velocity": 0.8,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_005"
+    },
+    {
+      "header": {"seq": 6, "stamp": {"secs": 1706000002, "nsecs": 500000000}},
+      "lidar_scan": [3.5, 5.5, 7.0, 10.5, 11.0],
+      "linear_velocity": 0.6,
+      "angular_velocity": 0.2,
+      "camera_frame_id": "front_cam_006"
+    },
+    {
+      "header": {"seq": 7, "stamp": {"secs": 1706000003, "nsecs": 0}},
+      "lidar_scan": [2.5, 4.0, 6.5, 9.0, 15.0],
+      "linear_velocity": 0.4,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_007"
+    },
+    {
+      "header": {"seq": 8, "stamp": {"secs": 1706000003, "nsecs": 500000000}},
+      "lidar_scan": [6.0, 8.0, 10.0, 12.0, 12.5],
+      "linear_velocity": 0.01,
+      "angular_velocity": 0.02,
+      "camera_frame_id": "front_cam_008"
+    },
+    {
+      "header": {"seq": 9, "stamp": {"secs": 1706000004, "nsecs": 0}},
+      "lidar_scan": [3.0, 5.0, 7.0, 9.5, 11.5],
+      "linear_velocity": 0.0,
+      "angular_velocity": -0.5,
+      "camera_frame_id": "front_cam_009"
+    },
+    {
+      "header": {"seq": 10, "stamp": {"secs": 1706000004, "nsecs": 500000000}},
+      "lidar_scan": [1.0, 3.0, 5.5, 8.0, 10.0],
+      "linear_velocity": 0.7,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_010"
+    },
+    {
+      "header": {"seq": 11, "stamp": {"secs": 1706000005, "nsecs": 0}},
+      "lidar_scan": [4.0, 6.5, 8.5, 11.0, 13.5],
+      "linear_velocity": 0.5,
+      "angular_velocity": 0.3,
+      "camera_frame_id": "front_cam_011"
+    },
+    {
+      "header": {"seq": 12, "stamp": {"secs": 1706000005, "nsecs": 500000000}},
+      "lidar_scan": [7.0, 9.0, 11.0, 12.0, 14.0],
+      "linear_velocity": 0.0,
+      "angular_velocity": 0.0,
+      "camera_frame_id": "front_cam_012"
+    }
+  ]
+}
